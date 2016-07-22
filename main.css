@@ -1,0 +1,79 @@
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    background-image: url("https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-3/background.jpg");
+    background-position: center top;
+    background-size: cover;
+}
+header {
+    padding: 10px 0;
+    width: 100%;
+}
+header h1 {
+    font-weight: 700;
+    margin: 0;
+    color: black;
+}
+header nav {
+    display: flex;
+    justify-content: space-between;
+}
+.btn.btn-primary {
+    color: black;
+    border: 0px;
+    text-shadow: none;
+    background-color: rgb(250, 250, 250);
+    margin-top: auto;
+}
+.btn.btn-primary:hover {
+    color: white;
+    background-color: #0099cc;
+}
+.btn.btn-secondary {
+    color: #0099cc;
+    background-color: white;
+}
+.btn.btn-secondary:hover {
+    color: white;
+    background-color: #0099cc;
+}
+.jumbotron {
+    display: flex;
+    align-items: center;
+    background-size: cover;
+    background-image: url("https://c2.staticflickr.com/8/7422/12172221485_f817b40383_b.jpg");
+    height: 560px;
+    color: rgb(240, 240, 240);
+}
+.jumbotron p {
+    font-size: 50px;
+    font-weight: 400;
+    margin:0;
+}
+section .row img {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+.btn.btn-tertiary {
+    color: #0099cc;
+}
+.btn.btn-tertiary:hover {
+    background-color: #0099cc;
+    color: white;
+}
+footer {
+    font-size: 12px;
+    padding: 20px 0;
+}
+footer .col-sm-8 {
+  display: flex;
+  justify-content: flex-end;
+}
+footer li img {
+  width: 32px;
+  height: 32px;
+}
+footer ul {
+  list-style: none;
+}
