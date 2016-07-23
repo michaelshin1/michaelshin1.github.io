@@ -1,5 +1,5 @@
 body {
-    font-family: "Roboto", sans-serif;
+    font-family: 'Open Sans Condensed', verdana, sans-serif;
     font-weight: 300;
     background-image: url("https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-3/background.jpg");
     background-position: center top;
@@ -8,30 +8,33 @@ body {
 header {
     padding: 10px 0;
     width: 100%;
+    position: fixed;
+    background-color: rgba(150, 150, 150, 0.7);
+    z-index: 1;
 }
 header h1 {
-    font-weight: 700;
+    font-weight: 200;
     margin: 0;
-    color: black;
+    color: white;
 }
 header nav {
     display: flex;
     justify-content: space-between;
 }
-.btn.btn-primary {
-    color: black;
+.btn.btn-first {
+    color: white;
     border: 0px;
     text-shadow: none;
-    background-color: rgb(250, 250, 250);
     margin-top: auto;
+    background-color: inherit;
 }
-.btn.btn-primary:hover {
-    color: white;
-    background-color: #0099cc;
+.btn.btn-first:hover {
+    color: black;
 }
 .btn.btn-secondary {
     color: #0099cc;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
 }
 .btn.btn-secondary:hover {
     color: white;
@@ -41,25 +44,27 @@ header nav {
     display: flex;
     align-items: center;
     background-size: cover;
-    background-image: url("https://c2.staticflickr.com/8/7422/12172221485_f817b40383_b.jpg");
-    height: 560px;
+    background-image: url("http://pennua.org/media/cms_page_media/1/College%20Hall%20.jpg");
+    height: 620px;
     color: rgb(240, 240, 240);
 }
 .jumbotron p {
     font-size: 50px;
-    font-weight: 400;
+    font-weight: 200;
     margin:0;
 }
 section .row img {
     width: 100%;
     height: 100%;
     margin: 0;
+    border-radius: 25px;
 }
 .btn.btn-tertiary {
-    color: #0099cc;
+    color: black;
+    border-radius: 10px;
 }
 .btn.btn-tertiary:hover {
-    background-color: #0099cc;
+    background-color: rgba(0, 153, 204, 0.4);
     color: white;
 }
 footer {
