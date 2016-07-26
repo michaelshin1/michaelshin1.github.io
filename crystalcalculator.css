@@ -35,45 +35,6 @@ header nav {
     color: black;
     background-color: inherit;
 }
-.btn.btn-secondary {
-    color: #0099cc;
-    background-color: rgba(255, 255, 255, 0.7);
-    border-radius: 10px;
-}
-.btn.btn-secondary:hover {
-    color: white;
-    background-color: #0099cc;
-}
-.jumbotron {
-    display: flex;
-    align-items: center;
-    background-size: cover;
-    background-image: url("http://pennua.org/media/cms_page_media/1/College%20Hall%20.jpg");
-    height: 620px;
-    color: rgb(240, 240, 240);
-}
-.jumbotron p {
-    font-size: 50px;
-    font-weight: 200;
-    margin:0;
-}
-.dropdown-menu {
-    background-color: rgba(150, 150, 150, 0.7);
-}
-section .row img {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    border-radius: 25px;
-}
-.btn.btn-tertiary {
-    color: black;
-    border-radius: 10px;
-}
-.btn.btn-tertiary:hover {
-    background-color: rgba(0, 153, 204, 0.4);
-    color: white;
-}
 footer {
     font-size: 12px;
     padding: 20px 0;
@@ -88,4 +49,18 @@ footer li img {
 }
 footer ul {
   list-style: none;
+}
+.jumbotron {
+    display: flex;
+    align-items: center;
+    background-size: cover;
+    background-image: url("mosquitodefault.jpg");
+    height: 500px;
+    color: rgb(240, 240, 240);
+}
+form {
+    width: 50%;
+}
+table {
+    width: 80%;
 }
