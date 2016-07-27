@@ -48,7 +48,7 @@ header nav {
     display: flex;
     align-items: center;
     background-size: cover;
-    background-image: url("http://pennua.org/media/cms_page_media/1/College%20Hall%20.jpg");
+    background-image: url("collegehall.jpg");
     height: 620px;
     color: rgb(240, 240, 240);
 }
