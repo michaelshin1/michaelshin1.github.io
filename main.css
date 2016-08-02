@@ -1,7 +1,7 @@
 body {
     font-family: 'Open Sans Condensed', verdana, sans-serif;
     font-weight: 300;
-    background-image: url("https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-3/background.jpg");
+    background-image: url("background.jpg");
     background-position: center top;
     background-size: cover;
 }

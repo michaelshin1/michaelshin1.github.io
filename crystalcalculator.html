@@ -5,143 +5,302 @@
     <meta charset="utf-8"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="crystalcalculator.css">
     <link rel="shortcut icon" href="favicon.ico">
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script src='crystalcalculator.js'></script>
 </head>
-<body>
-    <header class="container-fluid">
-        <div class="row">
-            <h1 class="col-sm-4">Michael Shin</h1>
-            <nav class="col-sm-8 text-right">
-                <p><a class="btn btn-default" href="bio.html">About Me</a></p>
-                <div class="btn-group">
-                    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Projects
-                        <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">Website</a></li>
-                        <li><a href="#">Research</a></li>
-                    </ul>
-                </div>
-                <div class="btn-group">
-                    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Calculators
-                        <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu" role="menu">
-                        <li><a href="crystalcalculator.html">Crystal Conditions</a></li>
-                        <li><a href="#">Primer Design</a></li>
-                    </ul>
-                </div>
-                <p><a class="btn btn-default" href="#">Contact</a></p>
-            </nav>
-        </div>
-    </header>
-    <section class="jumbotron">
-        <div class="container">
-            <div class="row text-center">
-                <p>Crystal Condition Calculator</p>
-                <p>24 Well Plate Concentrations</p>
+    <body>
+        <div class='menu'>
+            <div class='icon-close'>
+                <img src='menu-close.png'>
             </div>
-        </div>
-    </section>
-    <form>
-        <div class="form-group">
-            <label for="volume">Total Volume (mL)</label>
-            <input type="text" class="form-control" id="volInput" placeholder="Total Volume">
-        </div>
-        <div class="form-group">
-            <label for="percipitant">Percipitant Stock</label>
-            <input type="text" class="form-control" id="percipitant" placeholder="Percipitant Concentration">
-            <h6>*Input unit must match that of the output</h6>
-        </div>
-        <div class="form-group">
-            <label for="salt">Salt Stock (M)</label>
-            <input type="text" class="form-control" id="salt" placeholder="Salt Concentration">
-        </div>
-        <div class="form-group">
-            <label for="buffer">Buffer Stock (M)</label>
-            <input type="text" class="form-control" id="buffer" placeholder="Buffer Concentration">
-        </div>
-    </form>
-
-    <table class="table table-striped">
-        <thead>
-            <tr>
-                <th></th>
-                <th></th>
-                <th>1</th>
-                <th>2</th>
-                <th>3</th>
-                <th>4</th>
-                <th>5</th>
-                <th>6</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th scope="row"></th>
-                <td>concentrations</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <th scope="row">A</th>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <th scope="row">B</th>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <th scope="row">C</th>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <th scope="row">D</th>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-        </tbody>
-    </table>
-    
-    <footer class="container">
-        <div class="row">
-            <p class="col-sm-4">&copy; 2016 Michael Shin</p>
-            <ul class="col-sm-8">
-                <li class="col-sm-1"><a href="https://www.facebook.com/michael.shin.39"><img src="https://cdn3.iconfinder.com/data/icons/picons-social/57/06-facebook-512.png"></a></li>
-                <li class="col-sm-1"><a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Black_Instagram_icon.svg/2000px-Black_Instagram_icon.svg.png"></a></li>
-                <li class="col-sm-1"><a href="https://github.com/michaelshin1/michaelshin1.github.io"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg"></a></li>
+            <ul>
+                <li><a href='index.html'>Home</a></li>
+                <li><a href='bio.html'>About</a></li>
+                <li id='projects'><a href='#'>Projects</a><span class="caret"></span></li>
+                <li id='calculators'><a href='#'>Calculators</a><span class="caret"></span></li>
+                <li><a href='#'>Contact</a></li>
             </ul>
         </div>
-    </footer>
-</body>
+        <div class="container-fluid">
+            <div class='col-sm-2'>
+                <div class='icon-menu'>
+                    <i class='fa fa-bars'></i>
+                    Menu
+                </div>
+            </div>
+            <div class='col-sm-8 text-center'>
+                <h1>Crystal Condition Calculator</h1>
+            </div>
+        </div>
+        <div class='container'>
+            <div class='row'>
+                <div class='col-sm-4'>
+                    <form>
+                        <div class="form-group">
+                            <label for="volume">Total Volume (mL)</label>
+                            <input type="text" class="form-control" id="volInput" placeholder="Total Volume">
+                        </div>
+                        <div class="form-group">
+                            <label for="percipitant">Percipitant Stock</label>
+                            <input type="text" class="form-control" id="percipitant" placeholder="Percipitant Concentration">
+                            <h6>*Input unit must match that of the output</h6>
+                        </div>
+                        <div class="form-group">
+                            <label for="salt">Salt Stock (M)</label>
+                            <input type="text" class="form-control" id="salt" placeholder="Salt Concentration">
+                        </div>
+                        <div class="form-group">
+                            <label for="buffer">Buffer Stock (M)</label>
+                            <input type="text" class="form-control" id="buffer" placeholder="Buffer Concentration">
+                        </div>
+                        <div class="form-group">
+                            <label for="buffer">Final Buffer Concentration (M)</label>
+                            <input type="text" class="form-control" id="goalBuffer" placeholder="Final Buffer Concentration">
+                        </div>
+                    </form>
+                    <div class="btn-group">
+                        <button class="btn btn-default" type="button" id='calculate'>Calculate</button>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn btn-default" type="button" id='clear'>Clear</button>
+                    </div>
+                </div>
+                <div class='col-sm-8'>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Salt\Percipitant</th>
+                                <th><input type="text" class="form-control" id="col-1" placeholder="1"></th>
+                                <th><input type="text" class="form-control" id="col-2" placeholder="2"></th>
+                                <th><input type="text" class="form-control" id="col-3" placeholder="3"></th>
+                                <th><input type="text" class="form-control" id="col-4" placeholder="4"></th>
+                                <th><input type="text" class="form-control" id="col-5" placeholder="5"></th>
+                                <th><input type="text" class="form-control" id="col-6" placeholder="6"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row"><input type="text" class="form-control" id="row-a" placeholder="A"></th>
+                                <td id='a1'>
+                                    <table>
+                                        <tr><td class='asalt'>salt</td></tr>
+                                        <tr><td class='col-1-p'>percip.</td></tr>
+                                        <tr><td class='3'>buffer</td></tr>
+                                        <tr><td id='a1water'>water</td></tr>
+                                    </table>
+                                </td>
+                                <td id='a2'>
+                                    <table>
+                                        <tr><td class='asalt'>salt</td></tr>
+                                        <tr><td class='col-2-p'>percip.</td></tr>
+                                        <tr><td class='3'>buffer</td></tr>
+                                        <tr><td id='a2water'>water</td></tr>
+                                    </table>
+                                </td>
+                                <td id='a3'>
+                                    <table>
+                                        <tr><td class='asalt'>salt</td></tr>
+                                        <tr><td class='col-3-p'>percip.</td></tr>
+                                        <tr><td class='3'>buffer</td></tr>
+                                        <tr><td id='a3water'>water</td></tr>
+                                    </table>
+                                </td>
+                                <td id='a4'>
+                                    <table>
+                                        <tr><td class='asalt'>salt</td></tr>
+                                        <tr><td class='col-4-p'>percip.</td></tr>
+                                        <tr><td class='3'>buffer</td></tr>
+                                        <tr><td id='a4water'>water</td></tr>
+                                    </table>
+                                </td>
+                                <td id='a5'>
+                                    <table>
+                                        <tr><td class='asalt'>salt</td></tr>
+                                        <tr><td class='col-5-p'>percip.</td></tr>
+                                        <tr><td class='3'>buffer</td></tr>
+                                        <tr><td id='a5water'>water</td></tr>
+                                    </table>
+                                </td>
+                                <td id='a6'>
+                                    <table>
+                                        <tr><td class='asalt'>salt</td></tr>
+                                        <tr><td class='col-6-p'>percip.</td></tr>
+                                        <tr><td class='3'>buffer</td></tr>
+                                        <tr><td id='a6water'>water</td></tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><input type="text" class="form-control" id="row-b" placeholder="B"></th>
+                                <td id='b1'>
+                                    <table>
+                                        <tr><td class='bsalt'>salt</td></tr>
+                                        <tr><td class='col-1-p'>percip.</td></tr>
+                                        <tr><td class='3'>buffer</td></tr>
+                                        <tr><td id='b1water'>water</td></tr>
+                                    </table>
+                                </td>
+                                <td id='b2'>
+                                    <table>
+                                        <tr><td class='bsalt'>salt</td></tr>
+                                        <tr><td class='col-2-p'>percip.</td></tr>
+                                        <tr><td class='3'>buffer</td></tr>
+                                        <tr><td id='b2water'>water</td></tr>
+                                    </table>
+                                </td>
+                                <td id='b3'>
+                                    <table>
+                                        <tr><td class='bsalt'>salt</td></tr>
+                                        <tr><td class='col-3-p'>percip.</td></tr>
+                                        <tr><td class='3'>buffer</td></tr>
+                                        <tr><td id='b3water'>water</td></tr>
+                                    </table>
+                                </td>
+                                <td id='b4'>
+                                    <table>
+                                        <tr><td class='bsalt'>salt</td></tr>
+                                        <tr><td class='col-4-p'>percip.</td></tr>
+                                        <tr><td class='3'>buffer</td></tr>
+                                        <tr><td id='b4water'>water</td></tr>
+                                    </table>
+                                </td>
+                                <td id='b5'>
+                                    <table>
+                                        <tr><td class='bsalt'>salt</td></tr>
+                                        <tr><td class='col-5-p'>percip.</td></tr>
+                                        <tr><td class='3'>buffer</td></tr>
+                                        <tr><td id='b5water'>water</td></tr>
+                                    </table>
+                                </td>
+                                <td id='b6'>
+                                    <table>
+                                        <tr><td class='bsalt'>salt</td></tr>
+                                        <tr><td class='col-6-p'>percip.</td></tr>
+                                        <tr><td class='3'>buffer</td></tr>
+                                        <tr><td id='b6water'>water</td></tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><input type="text" class="form-control" id="row-c" placeholder="C"></th>
+                                <td id='c1'>
+                                    <table>
+                                        <tr><td class='csalt'>salt</td></tr>
+                                        <tr><td class='col-1-p'>percip.</td></tr>
+                                        <tr><td class='3'>buffer</td></tr>
+                                        <tr><td id='c1water'>water</td></tr>
+                                    </table>
+                                </td>
+                                <td id='c2'>
+                                    <table>
+                                        <tr><td class='csalt'>salt</td></tr>
+                                        <tr><td class='col-2-p'>percip.</td></tr>
+                                        <tr><td class='3'>buffer</td></tr>
+                                        <tr><td id='c2water'>water</td></tr>
+                                    </table>
+                                </td>
+                                <td id='c3'>
+                                    <table>
+                                        <tr><td class='csalt'>salt</td></tr>
+                                        <tr><td class='col-3-p'>percip.</td></tr>
+                                        <tr><td class='3'>buffer</td></tr>
+                                        <tr><td id='c3water'>water</td></tr>
+                                    </table>
+                                </td>
+                                <td id='c4'>
+                                    <table>
+                                        <tr><td class='csalt'>salt</td></tr>
+                                        <tr><td class='col-4-p'>percip.</td></tr>
+                                        <tr><td class='3'>buffer</td></tr>
+                                        <tr><td id='c4water'>water</td></tr>
+                                    </table>
+                                </td>
+                                <td id='c5'>
+                                    <table>
+                                        <tr><td class='csalt'>salt</td></tr>
+                                        <tr><td class='col-5-p'>percip.</td></tr>
+                                        <tr><td class='3'>buffer</td></tr>
+                                        <tr><td id='c5water'>water</td></tr>
+                                    </table>
+                                </td>
+                                <td id='c6'>
+                                    <table>
+                                        <tr><td class='csalt'>salt</td></tr>
+                                        <tr><td class='col-6-p'>percip.</td></tr>
+                                        <tr><td class='3'>buffer</td></tr>
+                                        <tr><td id='c6water'>water</td></tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><input type="text" class="form-control" id="row-d" placeholder="D"></th>
+                                <td id='d1'>
+                                    <table>
+                                        <tr><td class='dsalt'>salt</td></tr>
+                                        <tr><td class='col-1-p'>percip.</td></tr>
+                                        <tr><td class='3'>buffer</td></tr>
+                                        <tr><td id='d1water'>water</td></tr>
+                                    </table>
+                                </td>
+                                <td id='d2'>
+                                    <table>
+                                        <tr><td class='dsalt'>salt</td></tr>
+                                        <tr><td class='col-2-p'>percip.</td></tr>
+                                        <tr><td class='3'>buffer</td></tr>
+                                        <tr><td id='d2water'>water</td></tr>
+                                    </table>
+                                </td>
+                                <td id='d3'>
+                                    <table>
+                                        <tr><td class='dsalt'>salt</td></tr>
+                                        <tr><td class='col-3-p'>percip.</td></tr>
+                                        <tr><td class='3'>buffer</td></tr>
+                                        <tr><td id='d3water'>water</td></tr>
+                                    </table>
+                                </td>
+                                <td id='d4'>
+                                    <table>
+                                        <tr><td class='dsalt'>salt</td></tr>
+                                        <tr><td class='col-4-p'>percip.</td></tr>
+                                        <tr><td class='3'>buffer</td></tr>
+                                        <tr><td id='d4water'>water</td></tr>
+                                    </table>
+                                </td>
+                                <td id='d5'>
+                                    <table>
+                                        <tr><td class='dsalt'>salt</td></tr>
+                                        <tr><td class='col-5-p'>percip.</td></tr>
+                                        <tr><td class='3'>buffer</td></tr>
+                                        <tr><td id='d5water'>water</td></tr>
+                                    </table>
+                                </td>
+                                <td id='d6'>
+                                    <table>
+                                        <tr><td class='dsalt'>salt</td></tr>
+                                        <tr><td class='col-6-p'>percip.</td></tr>
+                                        <tr><td class='3'>buffer</td></tr>
+                                        <tr><td id='d6water'>water</td></tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <footer class="container">
+            <div class="row">
+                <p class="col-sm-4">&copy; 2016 Michael Shin</p>
+                <ul class="col-sm-8">
+                    <li class="col-sm-1"><a href="https://www.facebook.com/michael.shin.39"><img src="https://cdn3.iconfinder.com/data/icons/picons-social/57/06-facebook-512.png"></a></li>
+                    <li class="col-sm-1"><a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Black_Instagram_icon.svg/2000px-Black_Instagram_icon.svg.png"></a></li>
+                    <li class="col-sm-1"><a href="https://github.com/michaelshin1/michaelshin1.github.io"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg"></a></li>
+                </ul>
+            </div>
+        </footer>
+    </body>
 </html>
