@@ -1,37 +1,31 @@
 var main = function() {
-    //animation
-    $('.icon-menu').click(function() {
-        $('.menu').animate({left: '0px'}, 200);
-        $('body').animate({left: '285px'}, 200);
+    $('.arrow-next').click(function() {
+        var currentSlide = $('.active-slide');
+        var currentDot = $('.active-dot');
+        var nextSlide = currentSlide.next();
+        var nextDot = currentDot.next();
+        if(nextSlide.length === 0) {
+            nextSlide = $('.slide').first();
+            nextDot = $('.dot').first();
+        }
+        currentSlide.fadeOut(600).removeClass('active-slide');
+        nextSlide.fadeIn(600).addClass('active-slide');
+        currentDot.removeClass('active-dot');
+        nextDot.addClass('active-dot');
     });
-    $('.icon-close').click(function() {
-        $('.menu').animate({left: '-285px'}, 200);
-        $('body').animate({left: '0px'}, 200);
-    });
-    //dropdown menus
-    var projectsCount = 0;
-    $('#projects').click(function() {
-        if (projectsCount % 2 === 0) {
-            $('#projects').after('<li id="research"><a href="#">- Research</a></li>');
-            $('#projects').after('<li id="website"><a href="#">- Website</a></li>');
+    $('.arrow-prev').click(function() {
+        var currentSlide = $('.active-slide');
+        var currentDot = $('.active-dot');
+        var prevSlide = currentSlide.prev();
+        var prevDot = currentDot.prev();
+        if(prevSlide.length === 0) {
+            prevSlide = $('.slide').last();
+            prevDot = $('.dot').last();
         }
-        else {
-            $('#research').remove();
-            $('#website').remove();
-        }
-        projectsCount++;
-    });
-    var calcCount = 0;
-    $('#calculators').click(function() {
-        if (calcCount % 2 === 0) {
-            $('#calculators').after('<li id="crystal"><a href="crystalcalculator.html">- Crystal Conditions</a></li>');
-            $('#calculators').after('<li id="primer"><a href="primer.html">- Primer Design</a></li>');
-        }
-        else {
-            $('#crystal').remove();
-            $('#primer').remove();
-        }
-        calcCount++;
+        currentSlide.fadeOut(600).removeClass('active-slide');
+        prevSlide.fadeIn(600).addClass('active-slide');
+        currentDot.removeClass('active-dot');
+        prevDot.addClass('active-dot');
     });
 };
 $(document).ready(main);

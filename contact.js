@@ -21,12 +21,12 @@ var main = function() {
         }
         calcCount++;
     });
-    //design
-    $('#calculate').click(function() {
-        var fasta = $('#ncbi').val();
-        fasta = fasta.replace(/\s+/g, '').replace(/\d+/g, '').replace(/B/g, '').replace(/D/g, '').replace(/E/g, '').replace(/F/g, '').replace(/H/g, '').replace(/I/g, '').replace(/J/g, '').replace(/K/g, '').replace(/L/g, '').replace(/M/g, '').replace(/N/g, '').replace(/O/g, '').replace(/P/g, '').replace(/Q/g, '').replace(/R/g, '').replace(/S/g, '').replace(/U/g, '').replace(/V/g, '').replace(/W/g, '').replace(/X/g, '').replace(/Y/g, '').replace(/Z/g, '').replace(/[^A-Z]+/g,'');
-        var fastaArray = fasta.split('');
-        window.alert(fastaArray[17]);
+    $('#submit').click(function() {
+        if($('#name').val() === '' || $('#return-contact').val() === '' || $('#message').val() === '') {
+            window.alert('Please fill out all of the fields');
+        } else {
+            //PHP CODE
+        }
     });
 };
 $(document).ready(main);

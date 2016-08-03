@@ -68,10 +68,10 @@ footer ul {
 span {
     color: white;
 }
-form {
-    width: 100%;
-    padding-top: 30px;
+#forms {
+    margin-top: 30px;
 }
-#ncbi {
+#message {
     height: 200px;
+    width: 100%
 }

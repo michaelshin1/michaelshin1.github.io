@@ -8,19 +8,7 @@ var main = function() {
         $('.menu').animate({left: '-285px'}, 200);
         $('body').animate({left: '0px'}, 200);
     });
-    //dropdown menus
-    var projectsCount = 0;
-    $('#projects').click(function() {
-        if (projectsCount % 2 === 0) {
-            $('#projects').after('<li id="research"><a href="#">- Research</a></li>');
-            $('#projects').after('<li id="website"><a href="#">- Website</a></li>');
-        }
-        else {
-            $('#research').remove();
-            $('#website').remove();
-        }
-        projectsCount++;
-    });
+    //dropdown menu
     var calcCount = 0;
     $('#calculators').click(function() {
         if (calcCount % 2 === 0) {
