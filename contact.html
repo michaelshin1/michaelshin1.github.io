@@ -47,23 +47,28 @@
                     </ul>
                 </div>
                 <div class='col-sm-6'>
-                    <form>
+                    <form action='contact.php' method='post'>
                         <div class="form-group">
-                            <label for="volume">Name</label>
-                            <input type="text" class="form-control" id="name" placeholder="Name">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Name" name='name'>
                         </div>
                         <div class="form-group">
-                            <label for="percipitant">Contact Information</label>
-                            <input type="text" class="form-control" id="return-contact" placeholder="Contact Information">
+                            <label for="contact">Contact Information</label>
+                            <input type="text" class="form-control" id="return-contact" placeholder="Contact Information" name='contact'>
                             <h6>*Email address or phone number</h6>
                         </div>
                         <div class="form-group">
                             <label for="message">Message</label>
                             <br>
-                            <textarea id="message" placeholder="Message" cols="80" rows="1"></textarea>
+                            <textarea id="message" placeholder="Message" cols="80" rows="1" name='message'></textarea>
                         </div>
+                        <input type="submit" value="Send">
+                        <input type="reset" value="Clear">
                         <div class="btn-group">
                             <button class="btn btn-default" type="button" id='submit'>Submit</button>
+                        </div>
+                        <div class="btn-group">
+                            <button class="btn btn-default" type="button" id='clear'>Clear</button>
                         </div>
                     </form>
                 </div>
