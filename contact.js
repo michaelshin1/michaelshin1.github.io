@@ -21,6 +21,7 @@ var main = function() {
         }
         calcCount++;
     });
+    /*
     $('#submit').click(function() {
         if($('#name').val() === '' || $('#return-contact').val() === '' || $('#message').val() === '') {
             window.alert('Please fill out all of the fields');
@@ -28,5 +29,6 @@ var main = function() {
             //PHP CODE
         }
     });
+    */
 };
 $(document).ready(main);
